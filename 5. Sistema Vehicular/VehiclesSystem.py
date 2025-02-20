@@ -1,3 +1,15 @@
+""" Descripción:
+Este sistema permite a un servicio de transporte usar diferentes vehículos de manera genérica. Implementa el Principio de Sustitución de Liskov (LSP), asegurando que cualquier tipo de vehículo (Car, Bicycle) pueda sustituir a la clase base (Vehicle) sin causar problemas.
+
+Principios SOLID aplicados:
+✔ LSP: Car y Bicycle heredan de Vehicle y pueden usarse sin modificar el código del servicio de transporte.
+✔ DIP: TransportService depende de la abstracción Vehicle, no de clases concretas.
+
+Beneficio: Facilita la adición de nuevos tipos de vehículos sin modificar la lógica de transporte.
+"""
+
+
+
 from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
